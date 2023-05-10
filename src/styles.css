@@ -1,0 +1,11 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+
+
+:root{
+    --primary-color:#381050;
+    --font-family:'Rajdhani', sans-serif;
+}

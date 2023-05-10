@@ -1,0 +1,39 @@
+<header>
+    <div class="logo"><span>MOVIEFLEX</span></div>
+     <div class="hand_burger" (click)="openMenuBar()">
+       <span></span>
+       <span></span>
+       <span></span>
+     </div>
+    <div class ="menu_bar" [class.menuBar] = "manuAction">
+      <ul>
+        <a href=""><li>HOME</li></a>
+          <li><select>
+            <option value="">Moves</option>
+            <option value="Top Rated">Top Rated</option>
+            <option value="Action">Action</option>
+            <option value="Comady">Comady</option>
+            <option value="Horror">Horror</option>
+            <option value="fantacy">Fantacy</option>
+            <option value="Thriller">Thriller</option>
+            <option value="Sci-fi">Sci-fi</option>
+          </select>
+        </li>
+        <a><li>About</li></a>
+        <a><li class="contact">Contact Us</li></a>
+      </ul>
+      <div class="account">
+        <button name="sign in" type="submit" class=" sign sign_in">Sign In</button>
+        <button name="sign up" type="submit" class=" sign sign_up">Sign Up</button>
+      </div>
+    </div>
+  </header>
+  
+  <section class="main_sec">
+    <div class="main_heading">
+      <span class="heading_01">Find Your Best Movies.</span>
+      <span class="heading_02"> The film review is a popular way for critics to assess a film's overall quality and determine whether or not they think the film is worth recommending.</span>
+    </div>
+  
+  </section>
+  <app-movie-catagory></app-movie-catagory>

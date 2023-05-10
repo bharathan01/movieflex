@@ -1,0 +1,32 @@
+<header>
+    <div class="nav_bar">
+        <ul>
+            <a><li>ALL MOVIES</li></a>
+            <a><li>TOP RATED</li></a>
+            <a><li>ACTION</li></a>
+            <a><li>HORROR</li></a>
+            <a><li>FANTACY</li></a>
+            <a><li>THRILLER</li></a>
+            <a><li>COMADY</li></a>
+            <a><li>SCI-FI</li></a>
+        </ul>
+
+    </div>
+    <div class="search_bar">
+        <div class="search_input">
+            <input type="text" placeholder="search.." name="serach">
+            <button type="submit">Search</button>
+        </div>
+        <div class="addmovie">
+            <button type="submit" [routerLink] ="['/newmovies']"> Add New Movies</button>
+        </div>
+
+    </div>
+</header>
+<section>
+    <div class="container">
+        <div class="single_movie" routerLink = "/singlemovie" ></div>
+
+
+    </div>
+</section>
