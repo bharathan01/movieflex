@@ -7,11 +7,15 @@ import { Component } from '@angular/core';
 })
 export class ViewMovieReviewComponent {
  
-  openReviewform:boolean = false
+  openReviewform:boolean = true
+  openDelete:boolean=true
 
    openReview(){
     this.openReviewform =! this.openReviewform
 
+  }
+  openDeleteForm(){
+    this.openDelete =! this.openDelete
   }
 
 }

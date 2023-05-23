@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { EditMovieReviewComponent } from '../register/edit-movie-review.component';
 
 @Component({
   selector: 'app-add-review',
@@ -6,5 +7,11 @@ import { Component } from '@angular/core';
   styleUrls: ['./add-review.component.css']
 })
 export class AddReviewComponent {
+  
+  registerComponent:any
 
+
+  openRegisterForm(){
+    this.registerComponent = EditMovieReviewComponent 
+  }
 }

@@ -32,11 +32,17 @@ section {
 }
 
 .view_all_btn {
-    width: 80px;
+    width: 100px;
     height: 40px;
     background-color: transparent;
     border: 1px solid white;
     color: white;
+    transition: all 0.3s;
+    border-radius: 5px;
+}
+.view_all_btn:hover{
+    background-color: #fff;
+    color:var(--primary-color);
 }
 
 .view_heading {

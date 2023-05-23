@@ -1,14 +1,55 @@
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
 <section>
     <div class="add_review">
         <span>REVIEWS</span>
         <button type="submit" class="button_add" (click)="openReview()"> ADD REVIEW </button>
     </div>
     <div class="review" [class.openReview]="openReviewform">
+        <div class="movie_rating">
+            <span>Rate the Movie ?</span>
+            <div>
+                <i class="fa-regular fa-star" style="color: #ffc800;"></i>
+                <i class="fa-regular fa-star" style="color: #ffc800;"></i>
+                <i class="fa-regular fa-star" style="color: #ffc800;"></i>
+                <i class="fa-regular fa-star" style="color: #ffc800;"></i>
+                <i class="fa-regular fa-star" style="color: #ffc800;"></i>
+            </div>
+        </div>
         <div class="review_heading">
             <input type="text" name="review_heading" placeholder="Add a one word about the movie">
         </div>
         <div class="review_content">
-            <textarea name="review_content" id="review" cols="30" rows="10" class="review_txt">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt, ex eum? Quaerat architecto rerum perspiciatis. Iure natus voluptatibus iusto animi maxime, porro id hic cum non aliquam, est modi dignissimos maiores quam. Dolore quis itaque harum fuga excepturi minima impedit, qui ab amet labore soluta necessitatibus hic ullam mollitia, delectus nam. A velit animi voluptas nemo assumenda facere provident doloribus officiis voluptatibus labore? Eligendi temporibus quasi vero pariatur quod, veniam explicabo? Nemo, impedit excepturi ipsam alias culpa dolorem at? Ut molestiae error magnam pariatur cupiditate officiis? Ab vel deserunt similique temporibus assumenda quidem nemo quo explicabo minus animi atque non recusandae rerum consequuntur quam omnis, doloremque architecto aperiam? Eligendi aut saepe placeat soluta hic quaerat ut nemo quam illum incidunt, necessitatibus dolor ratione reiciendis, quas atque. Voluptatem dicta minus quod quas sunt inventore ex facere ea, vero praesentium cum laboriosam nam asperiores quibusdam sequi, ducimus magnam quasi maiores non quae, modi pariatur hic? Pariatur nostrum assumenda voluptatibus dignissimos voluptatum quo aliquid ipsam voluptas earum molestiae? Eum ipsa aliquid, laboriosam provident praesentium maiores ipsam iste nihil, corrupti qui, saepe labore voluptates amet perspiciatis omnis ab iusto. At rerum maiores nulla, quas sint eius numquam quidem quam. Perferendis quod accusamus quasi ullam reiciendis sequi ea voluptatum, porro alias quia exercitationem. Consequatur totam quaerat reiciendis? Illo iusto praesentium nihil necessitatibus ex nobis consequatur suscipit, cum autem at modi quisquam ea vel sint magnam, repudiandae debitis aut vitae eligendi obcaecati? Modi consequuntur consequatur, et nulla voluptas molestiae, obcaecati animi aliquam corrupti sit magnam deserunt consectetur optio! Odit enim iusto voluptatem mollitia accusamus, dolore aperiam laborum vitae doloribus adipisci fuga est quis architecto, et non cumque soluta reiciendis incidunt exercitationem libero optio debitis quo dicta in. Odio incidunt ipsam officia itaque corporis exercitationem asperiores nulla aut sed quos! Voluptas exercitationem fugiat cumque est nisi doloremque corrupti unde iure iusto corporis cum vero provident tempore distinctio sit alias, nesciunt quaerat ad fuga eos, dolores similique? Quisquam modi autem enim molestiae, ipsum soluta optio saepe, quas provident eius animi impedit placeat minus quia non. Natus maxime aliquam reiciendis voluptates alias. Fugiat quisquam facere in quo beatae reiciendis eum, nisi adipisci, repellendus facilis culpa deserunt quae nobis vel, rem voluptas corporis perspiciatis neque. Dolore perspiciatis eaque, ipsa temporibus adipisci numquam quos architecto odio ducimus maiores quaerat beatae voluptatem, ullam doloribus provident, eligendi atque laudantium consectetur. Quasi molestias eos ipsum quos nostrum maxime doloremque asperiores aperiam aliquid fuga? Quasi, nulla quae? Nobis ex, debitis quasi assumenda animi velit delectus asperiores eum praesentium quisquam laborum quidem est rem perspiciatis labore expedita natus harum at tempora maiores minus illum cumque totam. Quas tempore obcaecati, corrupti dolorem a vitae quis possimus iure aut unde cupiditate officiis molestiae repellendus? Rerum perspiciatis laborum, ullam suscipit dolores porro velit nam consectetur nihil sit recusandae iure amet, quis veritatis exercitationem ad sint, eius nulla inventore. Facilis doloribus ipsa eos commodi repudiandae deleniti tempore aspernatur accusantium! Sequi ut tempora corporis eius id blanditiis laboriosam rerum sint omnis vero inventore mollitia nobis quasi, quod nostrum nihil alias pariatur.</textarea>
+            <textarea name="review_content" id="review" cols="30" rows="10" class="review_txt">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt, ex eum? Quaerat architecto rerum perspiciatis. Iure natus voluptatibus iusto animi maxime, porro id hic cum non aliquam, est modi dignissimos maiores quam. Dolore quis itaque harum fuga excepturi minima impedit, qui ab amet labore soluta necessitatibus hic ullam mollitia, 
+                delectus nam. A velit animi voluptas nemo assumenda facere provident doloribus officiis voluptatibus 
+                labore? Eligendi temporibus quasi vero pariatur quod, veniam explicabo? Nemo, impedit excepturi ipsam alias 
+                culpa dolorem at? Ut molestiae error magnam pariatur cupiditate officiis? Ab vel deserunt similique temporibus 
+                assumenda quidem nemo quo explicabo minus animi atque non recusandae rerum consequuntur quam omnis, doloremque
+                 architecto aperiam? Eligendi aut saepe placeat soluta hic quaerat ut nemo quam illum incidunt, necessitatibus
+                  dolor ratione reiciendis, quas atque. Voluptatem dicta minus quod quas sunt inventore ex facere ea, vero praesentium 
+                  cum laboriosam nam asperiores quibusdam sequi, ducimus magnam quasi maiores non quae, modi pariatur hic? Pariatur 
+                  nostrum assumenda voluptatibus dignissimos voluptatum quo aliquid ipsam voluptas earum molestiae? Eum ipsa aliquid, 
+                  laboriosam provident praesentium maiores ipsam iste nihil, corrupti qui, saepe labore voluptates amet perspiciatis 
+                  omnis ab iusto. At rerum maiores nulla, quas sint eius numquam quidem quam. Perferendis quod accusamus quasi ullam 
+                  reiciendis sequi ea voluptatum, porro alias quia exercitationem. Consequatur totam quaerat reiciendis? Illo iusto 
+                  praesentium nihil necessitatibus ex nobis consequatur suscipit, cum autem at modi quisquam ea vel sint magnam, 
+                  repudiandae debitis aut vitae eligendi obcaecati? Modi consequuntur consequatur, et nulla voluptas molestiae, 
+                  obcaecati animi aliquam corrupti sit magnam deserunt consectetur optio! Odit enim iusto voluptatem mollitia accusamus, 
+                  dolore aperiam laborum vitae doloribus adipisci fuga est quis architecto, et non cumque soluta reiciendis incidunt 
+                  exercitationem libero optio debitis quo dicta in. Odio incidunt ipsam officia itaque corporis exercitationem asperiores
+                   nulla aut sed quos! Voluptas exercitationem fugiat cumque est nisi doloremque corrupti unde iure iusto corporis cum vero 
+                   provident tempore distinctio sit alias, nesciunt quaerat ad fuga eos, dolores similique? Quisquam modi autem enim molestiae,
+                    ipsum soluta optio saepe, quas provident eius animi impedit placeat minus quia non. Natus maxime aliquam reiciendis voluptates 
+                    alias. Fugiat quisquam facere in quo beatae reiciendis eum, nisi adipisci, repellendus facilis culpa deserunt quae nobis vel,
+                     rem voluptas corporis perspiciatis neque. Dolore perspiciatis eaque, ipsa temporibus adipisci numquam quos architecto odio 
+                     ducimus maiores quaerat beatae voluptatem, ullam doloribus provident, eligendi atque laudantium consectetur. Quasi molestias 
+                     eos ipsum quos nostrum maxime doloremque asperiores aperiam aliquid fuga? Quasi, nulla quae? Nobis ex, debitis quasi assumenda
+                      animi velit delectus asperiores eum praesentium quisquam laborum quidem est rem perspiciatis labore expedita natus harum at 
+                      tempora maiores minus illum cumque totam. Quas tempore obcaecati, corrupti dolorem a vitae quis possimus iure aut unde cupidi
+                      tate officiis molestiae repellendus? Rerum perspiciatis laborum, ullam suscipit dolores porro velit nam consectetur nihil sit
+                       recusandae iure amet, quis veritatis exercitationem ad sint, eius nulla inventore. Facilis doloribus ipsa eos commodi repudi
+                       andae deleniti tempore aspernatur accusantium! Sequi ut tempora 
+                  corporis eius id blanditiis laboriosam rerum sint omnis vero inventore mollitia nobis quasi, quod nostrum nihil 
+                  alias pariatur.</textarea>
         </div>
         <div class="addReviewbtn"><button class="button_add" type="submit">post</button></div>
         
@@ -21,14 +62,24 @@
             </div> 
             <div class="profile_name">
                 <span>Jecob Mathew</span>
-                <span></span>
-
+                <a (click)="openDeleteForm()"><em title="More option"><span><i class="fa-solid fa-circle-info" style="color: #ffffff;"></i></span></em></a>
+                 <div class="delete" [class.openDelete]="openDelete">
+                    <button type="submit"><i class="fa-solid fa-pencil" style="color: #000000;"></i>Edit</button>
+                    <button type="submit"><i class="fa-regular fa-trash-can" style="color: #000000;"></i>Delete</button>
+                 </div>
             </div>
             <div class="date">
                 <span>12/03/2023</span>
 
             </div>
 
+        </div>
+        <div class="rating_star">
+            <i class="fa-solid fa-star" style="color: #ffc800;"></i>
+            <i class="fa-solid fa-star" style="color: #ffc800;"></i>
+            <i class="fa-solid fa-star" style="color: #ffc800;"></i>
+            <i class="fa-solid fa-star" style="color: #ffc800;"></i>
+            <i class="fa-solid fa-star" style="color: #ffc800;"></i>
         </div>
         <div class="content">
             <h1 style="color: white;

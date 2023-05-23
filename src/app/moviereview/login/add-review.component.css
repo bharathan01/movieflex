@@ -1,0 +1,83 @@
+section {
+    width: 100%;
+    height: 100vh;
+    background-color: var(--primary-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.loginForm {
+    width: 400px;
+    height: 500px;
+    background-color: #fff;
+    border-radius: 20px;
+    box-shadow: 10px 14px 37px -9px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.login {
+    width: 100%;
+    height: 80px;
+    text-align: center;
+    font-size: 40px;
+    color: var(--primary-color);
+    font-family: var(--font-family);
+}
+
+.logindetails {
+    width: 93%;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    justify-content: center;
+}
+.logindetails form{
+    width: 100%;
+    color: var(--font-family);
+}
+
+.logindetails label {
+   
+     font-size: 18px;
+     
+}
+
+.logindetails input {
+    width: 94%;
+    height: 40px;
+    border:  1px solid var(--primary-color);
+    border-radius: 5px;
+    margin-bottom: 25px;
+    margin-top: 10px;
+    padding-left: 15px;
+    font-size: 19px;
+}
+.logindetails button{
+    width: 100%;
+    height: 40px;
+    border:  2px solid var(--primary-color);
+    border-radius: 5px;
+    background-color: #fff;
+    margin-top: 25px;
+    color: var(--primary-color);
+    font-size: 18px;
+    transition: all 0.3s;
+
+}
+.logindetails button:hover{
+    background-color: var(--primary-color);
+    color: #fff;
+    transform: translateY(3px);
+}
+.newuser a{
+    font-size: 20px;
+    color: var(--primary-color);
+    margin-left: 5px;
+
+}

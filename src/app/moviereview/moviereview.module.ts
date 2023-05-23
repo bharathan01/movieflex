@@ -7,8 +7,8 @@ import { ViewSingleMoveComponent } from './view-single-move/view-single-move.com
 import { ViewAllMoviesComponent } from './view-all-movies/view-all-movies.component';
 import { ViewMovieReviewComponent } from './view-movie-review/view-movie-review.component';
 import { AddMovieComponent } from './add-movie/add-movie.component';
-import { AddReviewComponent } from './add-review/add-review.component';
-import { EditMovieReviewComponent } from './edit-movie-review/edit-movie-review.component';
+import { AddReviewComponent } from './login/add-review.component';
+import { EditMovieReviewComponent } from './register/edit-movie-review.component';
 import { AppModule } from '../app.module';
 import { HeaderComponent } from '../header_nav/header/header.component';
 
