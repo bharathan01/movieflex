@@ -6,5 +6,12 @@ import { Component } from '@angular/core';
   styleUrls: ['./view-movie-review.component.css']
 })
 export class ViewMovieReviewComponent {
+ 
+  openReviewform:boolean = false
+
+   openReview(){
+    this.openReviewform =! this.openReviewform
+
+  }
 
 }

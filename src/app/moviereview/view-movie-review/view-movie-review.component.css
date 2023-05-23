@@ -10,7 +10,7 @@ section {
 
 .add_review {
     width: 90%;
-    height: 80px;
+    height: 60px;
     display: flex;
     justify-content: space-evenly;
 }
@@ -21,22 +21,6 @@ section {
     font-size: 40px;
 }
 
-.add_review button {
-    width: 100px;
-    height: 50px;
-    background-color: transparent;
-    color: white;
-    border: 1px solid white;
-    border-radius: 5px;
-}
-
-.add_review button:hover {
-    cursor: pointer;
-    color: var(--primary-color);
-    background-color: white;
-    transition: .2s ease-in-out;
-
-}
 
 .container {
     width: 90%;
@@ -101,12 +85,90 @@ section {
     height: 300px;
     overflow-y: scroll;
 }
-.content span{
+
+.content span {
     color: white;
     font-size: 15px;
 }
-@media(max-width:750px){
-    .add_review{
+
+.review {
+    width: 100%;
+    height:500px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 20px;
+}
+
+.review_heading {
+    width: 90%;
+    height: 90px;
+    display: grid;
+    place-items: center;
+}
+.review_content{
+    width: 90%;
+    height: auto;
+    display: grid;
+    place-items: center;
+
+}
+.addReviewbtn{
+    width: 90%;
+    height: 50px;
+    display: flex;
+    align-items:center;
+    justify-content: end;
+    margin-top:15px;
+}
+
+.button_add{
+    width: 100px;
+    height: 50px;
+    background-color: transparent;
+    color: white;
+    border: 1px solid white;
+    border-radius: 5px;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.5s ease-in-out;
+
+    
+}
+.button_add:hover {
+    cursor: pointer;
+    color: var(--primary-color);
+    background-color: white;
+}
+
+.review_heading input {
+    width: 100%;
+    height: 50px;
+    background-color: rgba(255, 255, 255, 0.307);
+    color: white;
+    font-size: 18px;
+    padding: 5px;
+    border: none;
+    border-radius: 10px;
+}
+.review_txt{
+    width: 99%;
+    height: 250px;
+    background-color: rgba(255, 255, 255, 0.307);
+    color: white;
+    font-size: 15px;
+    padding: 10px;
+    border: none;
+    border-radius: 10px;
+    font-family: var(--font-family);
+
+}
+.openReview{
+    display: none;
+}
+
+@media(max-width:750px) {
+    .add_review {
         margin-top: 100px;
     }
 }
