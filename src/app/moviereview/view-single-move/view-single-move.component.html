@@ -10,8 +10,16 @@
 
             </div>
             <div class="rating">
-                <span>{{movieDetails.Runtime}} {{movieDetails. Released}} </span><br>
-                <span>{{movieDetails.Type}}  {{movieDetails.Country}} {{movieDetails.Language}}</span>
+                <div class="duration"> <span>{{movieDetails.Runtime}}</span> <span>{{movieDetails. Released}}</span></div><br>
+                <div class="type"> <span>{{movieDetails.Type}}</span><span> {{movieDetails.Country}}</span><span>{{movieDetails.Language}}</span> </div><br>
+                <span>{{movieDetails.Genre}}</span>
+                <span>
+                    <i class="fa-solid fa-star" style="color: #ffc800;"></i>
+                    <i class="fa-solid fa-star" style="color: #ffc800;"></i>
+                    <i class="fa-solid fa-star" style="color: #ffc800;"></i>
+                    <i class="fa-solid fa-star" style="color: #ffc800;"></i>
+                    <i class="fa-solid fa-star" style="color: #ffc800;"></i>
+                </span>
 
             </div>
             <div class="more_img">
@@ -28,7 +36,16 @@
 </section>
 <section class="text">
     <div class="discription">
-        <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint deserunt laudantium iusto, neque amet saepe delectus aliquam! Incidunt excepturi vel facilis dolorum magni quidem temporibus dolores possimus nam illum at porro eaque quasi, eos praesentium dicta nihil officia unde reprehenderit, molestiae animi, eveniet qui quisquam doloremque? Beatae laborum saepe voluptates sapiente consectetur, provident optio veritatis natus quidem nisi sunt ab ullam, a amet! Minus quisquam fugiat aut voluptate consectetur deleniti fugit, dolore earum labore atque natus sed ipsa. Impedit, voluptates. Sequi quia dignissimos in veniam sunt distinctio tempore eum exercitationem ipsa, illo iure fugiat, neque maxime autem alias, dicta incidunt?</span>
+        <span>Actors</span>
+        <p>{{movieDetails.Actors}}</p> <br>
+        <span>Director</span> 
+        <p>{{movieDetails.Director}}</p> <br>
+        <span>Writer</span> <br>
+        <p>{{movieDetails.Writer}}</p> <br>
+        <span>Awards</span> <br>
+        <p>{{movieDetails.Awards}}</p> <br>
+        <span>Plot</span> <br>
+        <p>{{movieDetails.Plot}}</p> <br>
     </div>
 </section>
 <app-view-movie-review></app-view-movie-review>
