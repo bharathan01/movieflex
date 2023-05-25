@@ -11,7 +11,7 @@ import { MovieCatagoryComponent } from '../movie-catagory/movie-catagory.compone
 const routes: Routes = [{ path: '', component: MoviereviewComponent },
 {path:'allmovies', component:ViewAllMoviesComponent},
 {path:"newmovies",component:AddMovieComponent},
-{path:"singlemovie",component:ViewSingleMoveComponent},
+{path:"singlemovie/:id",component:ViewSingleMoveComponent},
 {path:"login",component:AddReviewComponent },
 {path:"register",component:EditMovieReviewComponent},
 {path:"catagory",component: MovieCatagoryComponent}];

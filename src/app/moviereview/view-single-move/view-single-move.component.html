@@ -2,20 +2,16 @@
 <section>
     <div class="container">
         <div class="move_img">
-            <img src="https://www.cinepari.in/wp-content/uploads/2023/01/pathan-poster-8-750x1029.jpg" alt="">
+            <img src={{movieDetails.Poster}} alt="">
         </div>
         <div class="movie_title">
             <div class="title">
-                <span>PATHAN</span>
+                <span>{{movieDetails.Title}}</span>
 
             </div>
             <div class="rating">
-                <span><i class="fa-solid fa-star" style="color: #ffc800;"></i>
-                    <i class="fa-solid fa-star" style="color: #ffc800;"></i>
-                    <i class="fa-solid fa-star" style="color: #ffc800;"></i>
-                    <i class="fa-solid fa-star" style="color: #ffc800;"></i>
-                    <i class="fa-solid fa-star" style="color: #ffc800;"></i></span><br>
-                <span>release data :12/03/2023</span>
+                <span>{{movieDetails.Runtime}} {{movieDetails. Released}} </span><br>
+                <span>{{movieDetails.Type}}  {{movieDetails.Country}} {{movieDetails.Language}}</span>
 
             </div>
             <div class="more_img">

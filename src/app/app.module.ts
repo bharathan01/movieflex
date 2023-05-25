@@ -7,18 +7,21 @@ import { HeaderComponent } from './header_nav/header/header.component';
 import { HomeComponent } from './home_page/home/home.component';
 import { MoviereviewModule } from './moviereview/moviereview.module';
 import { MovieCatagoryComponent } from './movie-catagory/movie-catagory.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
     HomeComponent,
-    MovieCatagoryComponent
+    MovieCatagoryComponent,
+
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    MoviereviewModule
+    MoviereviewModule,
+    HttpClientModule
    
   ],
   providers: [],

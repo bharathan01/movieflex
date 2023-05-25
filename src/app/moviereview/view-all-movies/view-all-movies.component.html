@@ -25,7 +25,16 @@
 </header>
 <section>
     <div class="container">
-        <div class="single_movie" routerLink = "/singlemovie" ></div>
+        <div class="single_movie" *ngFor="let i of allmovieDetails" routerLink = "/singlemovie/{{i._id}}" >
+            <img src={{i.Poster}} alt="">
+            <div class="intro">
+                <h2>{{i.Title}}</h2>
+                <span>{{i.Runtime}} {{i.Released}} <br>
+                    {{i.Language}}</span>
+                    <p>{{i.Plot|wordlimit:'20' }}</p>
+            </div>
+            
+        </div>
 
 
     </div>

@@ -11,6 +11,9 @@ import { AddReviewComponent } from './login/add-review.component';
 import { EditMovieReviewComponent } from './register/edit-movie-review.component';
 import { AppModule } from '../app.module';
 import { HeaderComponent } from '../header_nav/header/header.component';
+import { HttpClientModule } from '@angular/common/http';
+import { WordlimitPipe } from './word-limitpipe/wordlimit.pipe';
+
 
 
 @NgModule({
@@ -21,11 +24,13 @@ import { HeaderComponent } from '../header_nav/header/header.component';
     ViewMovieReviewComponent,
     AddMovieComponent,
     AddReviewComponent,
-    EditMovieReviewComponent
+    EditMovieReviewComponent,
+    WordlimitPipe,
   ],
   imports: [
     CommonModule,
-    MoviereviewRoutingModule
+    MoviereviewRoutingModule,
+    HttpClientModule
   ],
   exports:[
     MoviereviewComponent
