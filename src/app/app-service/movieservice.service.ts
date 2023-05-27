@@ -18,5 +18,14 @@ export class MovieserviceService {
       return this.http.get(this.baseUrl+'/singlemovie/'+movieId)
     }
 
+    registerNewUser(userdetails:any){
+      return this.http.post(this.baseUrl+'/register',userdetails)
+    }
+
+    logInUserDetails(userDetails:any){
+      return this.http.post(this.baseUrl+'/login',userDetails)
+
+    }
+
      
 }

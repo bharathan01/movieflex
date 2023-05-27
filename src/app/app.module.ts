@@ -8,6 +8,7 @@ import { HomeComponent } from './home_page/home/home.component';
 import { MoviereviewModule } from './moviereview/moviereview.module';
 import { MovieCatagoryComponent } from './movie-catagory/movie-catagory.component';
 import { HttpClientModule } from '@angular/common/http';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { HttpClientModule } from '@angular/common/http';
     BrowserModule,
     AppRoutingModule,
     MoviereviewModule,
-    HttpClientModule
+    HttpClientModule,
+    ReactiveFormsModule
    
   ],
   providers: [],

@@ -41,11 +41,8 @@ section {
     width: 100%;
     color: var(--font-family);
 }
-
-.logindetails label {
-   
-     font-size: 18px;
-     
+.logindetails form span{
+   color: red;
 }
 
 .logindetails input {
@@ -53,7 +50,7 @@ section {
     height: 40px;
     border:  1px solid var(--primary-color);
     border-radius: 5px;
-    margin-bottom: 25px;
+    margin-bottom: 15px;
     margin-top: 10px;
     padding-left: 15px;
     font-size: 19px;
@@ -69,6 +66,9 @@ section {
     font-size: 18px;
     transition: all 0.3s;
 
+}
+.form-control.ng-invalid.ng-touched{
+    border-color: red;
 }
 .logindetails button:hover{
     background-color: var(--primary-color);

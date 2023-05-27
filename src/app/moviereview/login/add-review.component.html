@@ -4,14 +4,14 @@
             <h3>Log In</h3>
         </div>
         <div class="logindetails">
-            <form>
-                <label for="email">Email Id:</label><br>
-                <input type="text" name="email" placeholder="email" id="email"><br>
-                <label for="password">Password:</label><br>
-                <input type="password" name="password" placeholder="Password" id="password"><br>
+            <form [formGroup]="loginUserForm">
+                <input type="text" name="email" placeholder="email" id="email" formControlName="email" class="form-control"><br>
+                <span *ngIf="loginUserForm.get('email').invalid && loginUserForm.get('email').touched">Please enter valid email.</span>
+                <input type="password" name="password" placeholder="Password" id="password" formControlName="password" class="form-control"><br>
+                <span *ngIf="loginUserForm.get('password').invalid && loginUserForm.get('password').touched">Please enter valid password.</span>
               
             </form>
-            <button type="submit">Log In</button>
+            <button type="submit" (click)="logInUser()">Log In</button>
         </div>
         <div class="newuser">
             <span>Don't have an account!<a routerLink="/register"><b>Register</b></a> </span>

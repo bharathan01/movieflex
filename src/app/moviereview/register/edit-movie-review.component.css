@@ -47,19 +47,26 @@ section {
      font-size: 18px;
      
 }
+.logindetails form{
+    text-align: center;
+}
+
+.logindetails form span{
+    margin-left: 8px;
+}
 
 .logindetails input {
-    width: 94%;
+    width: 90%;
     height: 40px;
     border:  1px solid var(--primary-color);
     border-radius: 5px;
-    margin-bottom: 15px;
-    margin-top: 5px;
+    margin-bottom:5px;
+    margin-top: 30px;
     padding-left: 15px;
     font-size: 19px;
 }
 .logindetails button{
-    width: 100%;
+    width: 95%;
     height: 40px;
     border:  2px solid var(--primary-color);
     border-radius: 5px;
@@ -82,4 +89,7 @@ section {
     color: var(--primary-color);
     margin-left: 5px;
 
+}
+.form-control.ng-invalid.ng-touched{
+    border-color: red;
 }

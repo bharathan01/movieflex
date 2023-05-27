@@ -4,133 +4,70 @@
             <div class="view_heading"><h1>Top Rated </h1></div>
             <div class="view_btn"><button class="view_all_btn" routerLink="allmovies">View all</button></div>
         </div>
-        <div class="movies">
-            <div class="top_single_movie">
-                <img src="https://m.media-amazon.com/images/M/MV5BYjhiNjBlODctY2ZiOC00YjVlLWFlNzAtNTVhNzM1YjI1NzMxXkEyXkFqcGdeQXVyMjQxNTE1MDA@._V1_.jpg" alt="">
-                <span>Avatar</span>
-            </div>
-            <div class="top_single_movie">
-                <img src="https://m.media-amazon.com/images/M/MV5BYjhiNjBlODctY2ZiOC00YjVlLWFlNzAtNTVhNzM1YjI1NzMxXkEyXkFqcGdeQXVyMjQxNTE1MDA@._V1_.jpg" alt="">
-                <span>Avatar</span>
-            </div>
-            <div class="top_single_movie">
-                <img src="https://m.media-amazon.com/images/M/MV5BYjhiNjBlODctY2ZiOC00YjVlLWFlNzAtNTVhNzM1YjI1NzMxXkEyXkFqcGdeQXVyMjQxNTE1MDA@._V1_.jpg" alt="">
-                <span>Avatar</span>
-            </div>
-            <div class="top_single_movie">
-                <img src="https://m.media-amazon.com/images/M/MV5BYjhiNjBlODctY2ZiOC00YjVlLWFlNzAtNTVhNzM1YjI1NzMxXkEyXkFqcGdeQXVyMjQxNTE1MDA@._V1_.jpg" alt="">
-                <span>Avatar</span>
-            </div>
-            <div class="top_single_movie">
-                <img src="https://m.media-amazon.com/images/M/MV5BYjhiNjBlODctY2ZiOC00YjVlLWFlNzAtNTVhNzM1YjI1NzMxXkEyXkFqcGdeQXVyMjQxNTE1MDA@._V1_.jpg" alt="">
-                <span>Avatar</span>
-            </div>
-            <div class="top_single_movie">
-                <img src="https://m.media-amazon.com/images/M/MV5BYjhiNjBlODctY2ZiOC00YjVlLWFlNzAtNTVhNzM1YjI1NzMxXkEyXkFqcGdeQXVyMjQxNTE1MDA@._V1_.jpg" alt="">
-                <span>Avatar</span>
-            </div>
-            
+        <div class="movies" >
+            <div class="top_single_movie" *ngFor="let i of movieCatagory" routerLink = "/singlemovie/{{i._id}}">
+                <img src={{i.Poster}} alt="">
+               <div class="intro">
+                    <h2>{{i.Title}}</h2>
+                    <span>{{i.Runtime}} {{i.Released}} <br>
+                        {{i.Language}}
+                         {{i.Actors}}   </span>
+               </div>
+           </div>
         </div>
     </div>
     <div class="action single_view">
         <div class="tittle"><h1>Action</h1></div>
         <div class="top_rated_movies">
-            <div class="single_movie">
-                <img src="https://m.media-amazon.com/images/M/MV5BYjhiNjBlODctY2ZiOC00YjVlLWFlNzAtNTVhNzM1YjI1NzMxXkEyXkFqcGdeQXVyMjQxNTE1MDA@._V1_.jpg" alt="">
-                <span>Avatar</span>
+            <div class="single_movie" *ngFor="let i of Action" routerLink = "/singlemovie/{{i._id}}">
+                <img src={{i.Poster}} alt="">
+                <span>{{i.Title}}</span>
             </div>
-            <div class="single_movie">
-                <img src="https://m.media-amazon.com/images/M/MV5BYjhiNjBlODctY2ZiOC00YjVlLWFlNzAtNTVhNzM1YjI1NzMxXkEyXkFqcGdeQXVyMjQxNTE1MDA@._V1_.jpg" alt="">
-                <span>Avatar</span>
-            </div>
-            <div class="single_movie">
-                <img src="https://m.media-amazon.com/images/M/MV5BYjhiNjBlODctY2ZiOC00YjVlLWFlNzAtNTVhNzM1YjI1NzMxXkEyXkFqcGdeQXVyMjQxNTE1MDA@._V1_.jpg" alt="">
-                <span>Avatar</span>
-            </div>
-            <div class="single_movie">
-                <img src="https://m.media-amazon.com/images/M/MV5BYjhiNjBlODctY2ZiOC00YjVlLWFlNzAtNTVhNzM1YjI1NzMxXkEyXkFqcGdeQXVyMjQxNTE1MDA@._V1_.jpg" alt="">
-                <span>Avatar</span>
-            </div>
-            <div class="single_movie">
-                <img src="https://m.media-amazon.com/images/M/MV5BYjhiNjBlODctY2ZiOC00YjVlLWFlNzAtNTVhNzM1YjI1NzMxXkEyXkFqcGdeQXVyMjQxNTE1MDA@._V1_.jpg" alt="">
-                <span>Avatar</span>
-            </div>
-            <div class="single_movie">
-                <img src="https://m.media-amazon.com/images/M/MV5BYjhiNjBlODctY2ZiOC00YjVlLWFlNzAtNTVhNzM1YjI1NzMxXkEyXkFqcGdeQXVyMjQxNTE1MDA@._V1_.jpg" alt="">
-                <span>Avatar</span>
-            </div>
-            <div class="single_movie">
-                <img src="https://m.media-amazon.com/images/M/MV5BYjhiNjBlODctY2ZiOC00YjVlLWFlNzAtNTVhNzM1YjI1NzMxXkEyXkFqcGdeQXVyMjQxNTE1MDA@._V1_.jpg" alt="">
-                <span>Avatar</span>
-            </div>
-            <div class="single_movie">
-                <img src="https://m.media-amazon.com/images/M/MV5BYjhiNjBlODctY2ZiOC00YjVlLWFlNzAtNTVhNzM1YjI1NzMxXkEyXkFqcGdeQXVyMjQxNTE1MDA@._V1_.jpg" alt="">
-                <span>Avatar</span>
-            </div>
+            
         </div>
     </div>
     <div class="horror single_view">
         <div class="tittle"><h1>Horror</h1></div>
         <div class="top_rated_movies">
-            <div class="single_movie">
-                <img src="https://m.media-amazon.com/images/M/MV5BYjhiNjBlODctY2ZiOC00YjVlLWFlNzAtNTVhNzM1YjI1NzMxXkEyXkFqcGdeQXVyMjQxNTE1MDA@._V1_.jpg" alt="">
-                <span>Avatar</span>
-            </div>
-            <div class="single_movie">
-                <img src="https://m.media-amazon.com/images/M/MV5BYjhiNjBlODctY2ZiOC00YjVlLWFlNzAtNTVhNzM1YjI1NzMxXkEyXkFqcGdeQXVyMjQxNTE1MDA@._V1_.jpg" alt="">
-                <span>Avatar</span>
+            <div class="single_movie" *ngFor="let i of horror" routerLink = "/singlemovie/{{i._id}}">
+                <img src={{i.Poster}} alt="">
+                <span>{{i.Title}}</span>
             </div>
         </div>
     </div>
     <div class="comady single_view">
         <div class="tittle"><h1>Comady</h1></div>
         <div class="top_rated_movies">
-            <div class="single_movie">
-                <img src="https://m.media-amazon.com/images/M/MV5BYjhiNjBlODctY2ZiOC00YjVlLWFlNzAtNTVhNzM1YjI1NzMxXkEyXkFqcGdeQXVyMjQxNTE1MDA@._V1_.jpg" alt="">
-                <span>Avatar</span>
-            </div>
-            <div class="single_movie">
-                <img src="https://m.media-amazon.com/images/M/MV5BYjhiNjBlODctY2ZiOC00YjVlLWFlNzAtNTVhNzM1YjI1NzMxXkEyXkFqcGdeQXVyMjQxNTE1MDA@._V1_.jpg" alt="">
-                <span>Avatar</span>
+            <div class="single_movie"*ngFor="let i of comady" routerLink = "/singlemovie/{{i._id}}">
+                <img src={{i.Poster}} alt="">
+                <span>{{i.Title}}</span>
             </div>
         </div>
     </div>
     <div class="Thriller single_view">
         <div class="tittle"><h1>Thriller</h1></div>
         <div class="top_rated_movies">
-            <div class="single_movie">
-                <img src="https://m.media-amazon.com/images/M/MV5BYjhiNjBlODctY2ZiOC00YjVlLWFlNzAtNTVhNzM1YjI1NzMxXkEyXkFqcGdeQXVyMjQxNTE1MDA@._V1_.jpg" alt="">
-                <span>Avatar</span>
-            </div>
-            <div class="single_movie">
-                <img src="https://m.media-amazon.com/images/M/MV5BYjhiNjBlODctY2ZiOC00YjVlLWFlNzAtNTVhNzM1YjI1NzMxXkEyXkFqcGdeQXVyMjQxNTE1MDA@._V1_.jpg" alt="">
-                <span>Avatar</span>
+            <div class="single_movie" *ngFor="let i of thriller" routerLink = "/singlemovie/{{i._id}}">
+                <img src={{i.Poster}} alt="">
+                <span>{{i.Title}}</span>
             </div>
         </div>
     </div>
     <div class="sci_fi single_view">
         <div class="tittle"><h1>Sci-Fi</h1> </div>
         <div class="top_rated_movies">
-            <div class="single_movie">
-                <img src="https://m.media-amazon.com/images/M/MV5BYjhiNjBlODctY2ZiOC00YjVlLWFlNzAtNTVhNzM1YjI1NzMxXkEyXkFqcGdeQXVyMjQxNTE1MDA@._V1_.jpg" alt="">
-                <span>Avatar</span>
-            </div>
-            <div class="single_movie">
-                <img src="https://m.media-amazon.com/images/M/MV5BYjhiNjBlODctY2ZiOC00YjVlLWFlNzAtNTVhNzM1YjI1NzMxXkEyXkFqcGdeQXVyMjQxNTE1MDA@._V1_.jpg" alt="">
-                <span>Avatar</span>
+            <div class="single_movie"*ngFor="let i of scifi" routerLink = "/singlemovie/{{i._id}}">
+                <img src={{i.Poster}} alt="">
+                <span>{{i.Title}}</span>
             </div>
         </div>
     </div>
     <div class="fantacy single_view">
         <div class="tittle"><h1>Fantacy</h1></div>
         <div class="top_rated_movies">
-            <div class="single_movie">
-                <img src="https://m.media-amazon.com/images/M/MV5BYjhiNjBlODctY2ZiOC00YjVlLWFlNzAtNTVhNzM1YjI1NzMxXkEyXkFqcGdeQXVyMjQxNTE1MDA@._V1_.jpg" alt="">
-                <span>Avatar</span>
-            </div>
-            <div class="single_movie">
-                <img src="https://m.media-amazon.com/images/M/MV5BYjhiNjBlODctY2ZiOC00YjVlLWFlNzAtNTVhNzM1YjI1NzMxXkEyXkFqcGdeQXVyMjQxNTE1MDA@._V1_.jpg" alt="">
-                <span>Avatar</span>
+            <div class="single_movie" *ngFor="let i of fantacy" routerLink = "/singlemovie/{{i._id}}">
+                <img src={{i.Poster}} alt="">
+                <span>{{i.Title}}</span>
             </div>
         </div>
     </div>

@@ -1,6 +1,6 @@
 section {
     width: 100%;
-    height: 600px;
+    height: 700px;
     background-color: var(--primary-color);
     display: flex;
     align-items: center;
@@ -10,7 +10,7 @@ section {
 
 .container {
     width: 90%;
-    height: 500px;
+    height: 600px;
     border-radius: 20px;
     position: relative;
     top: 0;
@@ -44,8 +44,9 @@ section {
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-direction: column;
     position: relative;
-    top: 100px;
+    top: 152px;
     left: 80px;
 }
 
@@ -157,6 +158,36 @@ section {
     margin-left: 30px;
     margin-top: 10px;
 }
+.save{
+    width: 70%;
+    height: 0px;
+    background-color: rgba(0, 0, 0, 0.601);
+    position:absolute;
+    bottom: 10px;
+    border-radius: 20px;
+    visibility: hidden;
+    transition: all .5s;
+    display: flex;
+    align-items: center;
+    justify-content:space-evenly;
+    
+}
+.save i{
+    visibility: hidden;
+    font-size: 0px;
+    transition: o.5s;
+    opacity: .6;
+}
+.move_img:hover .save{
+   height: 100px;
+   bottom:-2px;
+   visibility: visible; 
+   cursor: pointer;
+} 
+.move_img:hover .save i{
+    visibility: visible;
+    font-size: 35px;
+}
 
 @media(max-width:1000px) {
     .container {
@@ -215,7 +246,7 @@ section {
 
     .discription {
         position: relative;
-        top: 260px;
+        top: 140px;
         overflow-y: scroll;
         height: 250px;
     }

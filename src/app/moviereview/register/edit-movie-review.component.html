@@ -4,18 +4,27 @@
             <h3>Register</h3>
         </div>
         <div class="logindetails">
-            <form>
-                <label for="email">Name:</label><br>
-                <input type="text" name="name" placeholder="name" id="name"><br>
-                <label for="email">User name</label><br>
-                <input type="text" name="username" placeholder="username" id="username"><br>
-                <label for="email">Email Id:</label><br>
-                <input type="text" name="email" placeholder="email" id="email"><br>
-                <label for="password">Password:</label><br>
-                <input type="password" name="password" placeholder="Password" id="password"><br>
+            <form [formGroup]="userRegDetails">
+            
+                <input type="text" name="name" placeholder="name" id="name" class="form-control" formControlName="name">
+                 <span *ngIf="userRegDetails.get('name').invalid && userRegDetails.get('name').touched">
+                    <i class="fa-regular fa-circle-xmark" style="color: #ff0000;"></i> 
+                 </span><br>
+                <input type="text" name="username" placeholder="username" class="form-control" id="username"formControlName="username">
+                <span *ngIf="userRegDetails.get('username').invalid && userRegDetails.get('username').touched">
+                    <i class="fa-regular fa-circle-xmark" style="color: #ff0000;"></i> 
+                </span><br>
+                <input type="text" name="email" placeholder="email" class="form-control" id="email" formControlName="email">
+                <span *ngIf="userRegDetails.get('email').invalid && userRegDetails.get('email').touched">
+                    <i class="fa-regular fa-circle-xmark" style="color: #ff0000;"></i> 
+                 </span><br>
+                <input type="password" name="password" placeholder="Password" class="form-control" id="password" formControlName="password">
+                <span *ngIf="userRegDetails.get('password').invalid && userRegDetails.get('password').touched">
+                    <i class="fa-regular fa-circle-xmark" style="color: #ff0000;"></i>  
+                </span><br>
                  
             </form>
-            <button type="submit">Log In</button>
+            <button type="submit" (click)="Register()">Register</button>
         </div>
         <div class="newuser">
             <span>if you have an account!<a routerLink="/login"><b>Log in</b></a> </span>
