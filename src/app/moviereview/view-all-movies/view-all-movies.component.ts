@@ -9,6 +9,9 @@ import { MovieserviceService } from 'src/app/app-service/movieservice.service';
 
 export class ViewAllMoviesComponent {
   allmovieDetails:any
+  moveByCatagory:any
+  searchKey:any
+
 
  constructor(private service:MovieserviceService){}
    
@@ -17,4 +20,22 @@ export class ViewAllMoviesComponent {
       this.allmovieDetails = movieData.data
     })
    }
+
+   
+
+   moveCategory(moveType:any){
+    if(moveType){
+      this.moveByCatagory = this.allmovieDetails.filter( (el:any) =>{
+        return el.category == moveType
+     })
+
+    }
+    if(moveType ==' '){
+      this.moveByCatagory = this.allmovieDetails
+    }
+    
+    
+
+   }
+
 }

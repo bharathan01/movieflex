@@ -1,20 +1,20 @@
 <header>
     <div class="nav_bar">
         <ul>
-            <a><li>ALL MOVIES</li></a>
-            <a><li>TOP RATED</li></a>
-            <a><li>ACTION</li></a>
-            <a><li>HORROR</li></a>
-            <a><li>FANTACY</li></a>
-            <a><li>THRILLER</li></a>
-            <a><li>COMADY</li></a>
-            <a><li>SCI-FI</li></a>
+            <a (click)=" moveCategory(' ')" ><li>ALL MOVIES</li></a>
+            <a (click)=" moveCategory(' ')"><li>TOP RATED</li></a>
+            <a (click)=" moveCategory('Action')"><li>ACTION</li></a>
+            <a (click)=" moveCategory('Horror')"><li>HORROR</li></a>
+            <a (click)=" moveCategory('Fantasy')"><li>FANTACY</li></a>
+            <a (click)=" moveCategory('Thriller')"><li>THRILLER</li></a>
+            <a (click)=" moveCategory('Comedy')"><li>COMADY</li></a>
+            <a (click)=" moveCategory('Sci-Fi')"><li>SCI-FI</li></a>
         </ul>
 
     </div>
     <div class="search_bar">
         <div class="search_input">
-            <input type="text" placeholder="search.." name="serach">
+            <input type="text" placeholder="search.." name="serach" id="search_data" [(ngModel)]="searchKey">
             <button type="submit">Search</button>
         </div>
         <div class="addmovie">
@@ -25,7 +25,7 @@
 </header>
 <section>
     <div class="container">
-        <div class="single_movie" *ngFor="let i of allmovieDetails" routerLink = "/singlemovie/{{i._id}}" >
+        <div class="single_movie" *ngFor="let i of  moveByCatagory ||allmovieDetails|search:searchKey" routerLink = "/singlemovie/{{i._id}}" >
             <img src={{i.Poster}} alt="">
             <div class="intro">
                 <h2>{{i.Title}}</h2>

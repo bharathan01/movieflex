@@ -48,7 +48,7 @@ section {
 }
 
 .view_heading {
-    width: 50%;
+    width: 35%;
     display: flex;
     justify-content: start;
 }
@@ -103,7 +103,7 @@ section {
 }
 
 .top_rated_movies {
-    width: 90%;
+    width: 78%;
     height: 300px;
     display: flex;
     align-items: center;
@@ -139,7 +139,7 @@ section {
 }
 
 .tittle {
-    width: 7%;
+    width: 8%;
 
 }
 
@@ -187,7 +187,7 @@ section {
    transform: scale(1.1);
 }
 .scroll{
-    width: 84%;
+    width: 64%;
     height: 50px;
     display: flex;
     align-items: center;

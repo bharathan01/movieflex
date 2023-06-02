@@ -23,6 +23,8 @@ export class MovieCatagoryComponent {
   ngOnInit(){
     this.service.getMovieDetails().subscribe((data:any) => {
      this.movieCatagory = data.data
+     console.log(data.data);
+     
      this.Action = this.movieCatagory.filter( (el:any) =>{
       return el.category == "Action"
     })

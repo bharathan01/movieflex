@@ -13,7 +13,8 @@ import { AppModule } from '../app.module';
 import { HeaderComponent } from '../header_nav/header/header.component';
 import { HttpClientModule } from '@angular/common/http';
 import { WordlimitPipe } from './word-limitpipe/wordlimit.pipe';
-import { ReactiveFormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { SearchPipe } from './serachpipe/search.pipe';
 
 
 
@@ -27,12 +28,15 @@ import { ReactiveFormsModule } from '@angular/forms';
     AddReviewComponent,
     EditMovieReviewComponent,
     WordlimitPipe,
+    SearchPipe,
   ],
   imports: [
     CommonModule,
     MoviereviewRoutingModule,
     HttpClientModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    ReactiveFormsModule,
+    FormsModule
   ],
   exports:[
     MoviereviewComponent
