@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ElementRef, ViewChild } from '@angular/core';
 import { MovieserviceService } from '../app-service/movieservice.service';
 
 @Component({
@@ -14,6 +14,9 @@ export class MovieCatagoryComponent {
  scifi:any
  horror:any
  fantacy:any
+ 
+ @ViewChild('scroll_view') scrollLeft !:ElementRef
+
   constructor(private service:MovieserviceService){
 
   }
@@ -43,5 +46,15 @@ export class MovieCatagoryComponent {
     })
     
   }
+
+ScrollMoveLeft(){
+  this.scrollLeft.nativeElement.scrollLeft +=1450
+}
+scrollRight(){
+  this.scrollLeft.nativeElement.scrollLeft -=1450
+  console.log((this.scrollLeft));
+  
+}
+  
 
 }

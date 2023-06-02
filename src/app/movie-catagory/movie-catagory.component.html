@@ -4,7 +4,17 @@
             <div class="view_heading"><h1>Top Rated </h1></div>
             <div class="view_btn"><button class="view_all_btn" routerLink="allmovies">View all</button></div>
         </div>
-        <div class="movies" >
+        <div class="scroll">
+            <a (click)="scrollRight()"><div class="left">
+                <i class="fa-solid fa-angle-left" style="color: #ffffff;"></i>
+            </div></a>
+            <a (click)="ScrollMoveLeft()"><div class="left">
+                <i class="fa-solid fa-angle-right" style="color: #ffffff;"></i>
+            </div></a>
+           
+           
+        </div>
+        <div class="movies" #scroll_view>
             <div class="top_single_movie" *ngFor="let i of movieCatagory" routerLink = "/singlemovie/{{i._id}}">
                 <img src={{i.Poster}} alt="">
                <div class="intro">

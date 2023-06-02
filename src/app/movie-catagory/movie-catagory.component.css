@@ -10,7 +10,7 @@ section {
 
 .top_rated {
     width: 100%;
-    height: 450px;
+    height: 540px;
     display: grid;
     place-items: center;
     margin-top: 100px;
@@ -185,6 +185,28 @@ section {
 }
 .single_movie:hover{
    transform: scale(1.1);
+}
+.scroll{
+    width: 84%;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+}
+.left{
+    width: 40px;
+    height: 40px;
+    border-radius: 5px;
+    background-color: var(--primary-color);
+    box-shadow: 2px 2px 2px 2px;
+    font-size: 18px;
+    display: grid;
+    place-content: center;
+    margin: 10px;
+    transform: scale(1);
+}
+.left:hover{
+    transform: scale(0.9);
 }
 
 @media(max-width:450px) {
