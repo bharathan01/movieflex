@@ -22,9 +22,15 @@
         <a><li>About</li></a>
         <a><li class="contact">Contact Us</li></a>
       </ul>
-      <div class="account">
-        <button name="sign in" type="submit" class=" sign sign_in" routerLink="login">Sign In</button>
-        <button name="sign up" type="submit" class=" sign sign_up" routerLink="register">Sign Up</button>
+      <div class="account" *ngIf="userEmail">
+        <div class="profile">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b5/Windows_10_Default_Profile_Picture.svg/2048px-Windows_10_Default_Profile_Picture.svg.png" alt="">
+        </div>
+        <div class="username">
+            <span>{{userEmail}}</span><br>
+            <span> user name :{{userName}}</span>
+        </div>
+        <button name="sign up" type="submit" class=" sign sign_up" (click)="logout()">log out</button>
       </div>
     </div>
   </header>

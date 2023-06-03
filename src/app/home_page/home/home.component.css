@@ -140,7 +140,25 @@ header {
 .hand_burger {
     display: none;
 }
-
+.profile{
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.profile img{
+    width: 50px;
+    height: 50px;
+}
+.username{
+    width: auto;
+    margin: 10px;
+    font-size: 20px;
+}
+.username span:nth-child(1){
+    font-size: 15px;
+}
 @media(max-width:860px) {
     .menu_bar {
         width: 35%;
@@ -208,6 +226,7 @@ header {
         top:100px;
 
     }
+    
 
 }
 

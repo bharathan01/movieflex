@@ -23,7 +23,6 @@ export class MovieCatagoryComponent {
   ngOnInit(){
     this.service.getMovieDetails().subscribe((data:any) => {
      this.movieCatagory = data.data
-     console.log(data.data);
      
      this.Action = this.movieCatagory.filter( (el:any) =>{
       return el.category == "Action"
@@ -32,7 +31,7 @@ export class MovieCatagoryComponent {
       return el.category == "Comedy"
     })
     this.horror = this.movieCatagory.filter( (el:any) =>{
-      return el.category == " Horror"
+      return el.category == "Horror"
     })
     this.thriller = this.movieCatagory.filter( (el:any) =>{
       return el.category == "Thriller"
@@ -54,7 +53,6 @@ ScrollMoveLeft(){
 }
 scrollRight(){
   this.scrollLeft.nativeElement.scrollLeft -=1450
-  console.log((this.scrollLeft));
   
 }
   
