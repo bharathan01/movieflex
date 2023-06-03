@@ -145,6 +145,7 @@ section {
     position: relative;
     overflow: hidden;
     transition: all 0.5s ease-in-out;
+    transform: scale(1);
 
 
 }
@@ -153,6 +154,7 @@ section {
     cursor: pointer;
     color: var(--primary-color);
     background-color: white;
+    transform: scale(0.9);
 }
 
 .review_heading input {
@@ -237,7 +239,9 @@ section {
 .openDelete{
     display: none;
 }
-
+.activeStar{
+    color: #ffc800;
+}
 @media(max-width:750px) {
     .add_review {
         margin-top: 100px;

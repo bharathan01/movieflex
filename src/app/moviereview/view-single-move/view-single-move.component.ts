@@ -20,7 +20,7 @@ export class ViewSingleMoveComponent {
      
      this.service.getSingleMovieDetails(this.singleMovieId).subscribe((data:any) =>{
         this.movieDetails = data.data
-        console.log(this.movieDetails)
+
      })
 
 

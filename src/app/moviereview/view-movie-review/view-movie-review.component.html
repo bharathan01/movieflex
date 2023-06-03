@@ -7,61 +7,27 @@
     <div class="review" [class.openReview]="openReviewform">
         <div class="movie_rating">
             <span>Rate the Movie ?</span>
-            <div>
-                <i class="fa-regular fa-star" style="color: #ffc800;"></i>
-                <i class="fa-regular fa-star" style="color: #ffc800;"></i>
-                <i class="fa-regular fa-star" style="color: #ffc800;"></i>
-                <i class="fa-regular fa-star" style="color: #ffc800;"></i>
-                <i class="fa-regular fa-star" style="color: #ffc800;"></i>
+            <div *ngFor="let i of starCount">
+                <i class="fa-solid fa-star" (click)="addRating(i)" [ngClass]="{'activeStar':i<=rating}"></i>
             </div>
         </div>
         <div class="review_heading">
-            <input type="text" name="review_heading" placeholder="Add a one word about the movie">
+            <input type="text" name="review_heading" placeholder="Add a one word about the movie" [(ngModel)]="reviewHeading">
         </div>
         <div class="review_content">
-            <textarea name="review_content" id="review" cols="30" rows="10" class="review_txt">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt, ex eum? Quaerat architecto rerum perspiciatis. Iure natus voluptatibus iusto animi maxime, porro id hic cum non aliquam, est modi dignissimos maiores quam. Dolore quis itaque harum fuga excepturi minima impedit, qui ab amet labore soluta necessitatibus hic ullam mollitia, 
-                delectus nam. A velit animi voluptas nemo assumenda facere provident doloribus officiis voluptatibus 
-                labore? Eligendi temporibus quasi vero pariatur quod, veniam explicabo? Nemo, impedit excepturi ipsam alias 
-                culpa dolorem at? Ut molestiae error magnam pariatur cupiditate officiis? Ab vel deserunt similique temporibus 
-                assumenda quidem nemo quo explicabo minus animi atque non recusandae rerum consequuntur quam omnis, doloremque
-                 architecto aperiam? Eligendi aut saepe placeat soluta hic quaerat ut nemo quam illum incidunt, necessitatibus
-                  dolor ratione reiciendis, quas atque. Voluptatem dicta minus quod quas sunt inventore ex facere ea, vero praesentium 
-                  cum laboriosam nam asperiores quibusdam sequi, ducimus magnam quasi maiores non quae, modi pariatur hic? Pariatur 
-                  nostrum assumenda voluptatibus dignissimos voluptatum quo aliquid ipsam voluptas earum molestiae? Eum ipsa aliquid, 
-                  laboriosam provident praesentium maiores ipsam iste nihil, corrupti qui, saepe labore voluptates amet perspiciatis 
-                  omnis ab iusto. At rerum maiores nulla, quas sint eius numquam quidem quam. Perferendis quod accusamus quasi ullam 
-                  reiciendis sequi ea voluptatum, porro alias quia exercitationem. Consequatur totam quaerat reiciendis? Illo iusto 
-                  praesentium nihil necessitatibus ex nobis consequatur suscipit, cum autem at modi quisquam ea vel sint magnam, 
-                  repudiandae debitis aut vitae eligendi obcaecati? Modi consequuntur consequatur, et nulla voluptas molestiae, 
-                  obcaecati animi aliquam corrupti sit magnam deserunt consectetur optio! Odit enim iusto voluptatem mollitia accusamus, 
-                  dolore aperiam laborum vitae doloribus adipisci fuga est quis architecto, et non cumque soluta reiciendis incidunt 
-                  exercitationem libero optio debitis quo dicta in. Odio incidunt ipsam officia itaque corporis exercitationem asperiores
-                   nulla aut sed quos! Voluptas exercitationem fugiat cumque est nisi doloremque corrupti unde iure iusto corporis cum vero 
-                   provident tempore distinctio sit alias, nesciunt quaerat ad fuga eos, dolores similique? Quisquam modi autem enim molestiae,
-                    ipsum soluta optio saepe, quas provident eius animi impedit placeat minus quia non. Natus maxime aliquam reiciendis voluptates 
-                    alias. Fugiat quisquam facere in quo beatae reiciendis eum, nisi adipisci, repellendus facilis culpa deserunt quae nobis vel,
-                     rem voluptas corporis perspiciatis neque. Dolore perspiciatis eaque, ipsa temporibus adipisci numquam quos architecto odio 
-                     ducimus maiores quaerat beatae voluptatem, ullam doloribus provident, eligendi atque laudantium consectetur. Quasi molestias 
-                     eos ipsum quos nostrum maxime doloremque asperiores aperiam aliquid fuga? Quasi, nulla quae? Nobis ex, debitis quasi assumenda
-                      animi velit delectus asperiores eum praesentium quisquam laborum quidem est rem perspiciatis labore expedita natus harum at 
-                      tempora maiores minus illum cumque totam. Quas tempore obcaecati, corrupti dolorem a vitae quis possimus iure aut unde cupidi
-                      tate officiis molestiae repellendus? Rerum perspiciatis laborum, ullam suscipit dolores porro velit nam consectetur nihil sit
-                       recusandae iure amet, quis veritatis exercitationem ad sint, eius nulla inventore. Facilis doloribus ipsa eos commodi repudi
-                       andae deleniti tempore aspernatur accusantium! Sequi ut tempora 
-                  corporis eius id blanditiis laboriosam rerum sint omnis vero inventore mollitia nobis quasi, quod nostrum nihil 
-                  alias pariatur.</textarea>
+            <textarea name="review_content" id="review" cols="30" rows="10" class="review_txt" [(ngModel)]="reviewContent"></textarea>
         </div>
-        <div class="addReviewbtn"><button class="button_add" type="submit">post</button></div>
+        <div class="addReviewbtn"><button class="button_add" type="submit" (click)="uploadReview()">post</button></div>
         
     </div>
-    <div class="container">
+    <div class="container" *ngFor="let i  of movieReviewDate">
         <div class="profile">
             <div class="profile_photo">
                 <img src="https://marketplace.canva.com/EAFEits4-uw/1/0/1600w/canva-boy-cartoon-gamer-animated-twitch-profile-photo-oEqs2yqaL8s.jpg" alt="">
 
             </div> 
             <div class="profile_name">
-                <span>Jecob Mathew</span>
+                <span>{{i.username}}</span>
                 <a (click)="openDeleteForm()"><em title="More option"><span><i class="fa-solid fa-circle-info" style="color: #ffffff;"></i></span></em></a>
                  <div class="delete" [class.openDelete]="openDelete">
                     <button type="submit"><i class="fa-solid fa-pencil" style="color: #000000;"></i>Edit</button>
@@ -69,23 +35,18 @@
                  </div>
             </div>
             <div class="date">
-                <span>12/03/2023</span>
+                <span>{{i.date}}</span>
 
             </div>
 
         </div>
         <div class="rating_star">
             <i class="fa-solid fa-star" style="color: #ffc800;"></i>
-            <i class="fa-solid fa-star" style="color: #ffc800;"></i>
-            <i class="fa-solid fa-star" style="color: #ffc800;"></i>
-            <i class="fa-solid fa-star" style="color: #ffc800;"></i>
-            <i class="fa-solid fa-star" style="color: #ffc800;"></i>
         </div>
         <div class="content">
             <h1 style="color: white;
-            margin-bottom: 25px;">Header</h1>
-            <span>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Magnam, enim, voluptates fugit minima maxime quasi eum repudiandae, quia accusantium iusto nisi quo harum quisquam eaque iure quidem pariatur hic doloribus? Ratione sequi doloribus omnis quisquam quae eum quam? Hic tempora, ratione eum incidunt facilis qui itaque in recusandae, reiciendis, repellat at fugit aliquam. Facere, natus, consectetur excepturi dolor neque beatae pariatur quis officiis, dignissimos deserunt quo nulla autem praesentium voluptatum. Maxime tempore officiis nostrum totam ratione natus quis atque ad, ipsa, cumque excepturi at recusandae optio commodi perferendis laudantium doloribus placeat? Nesciunt consequuntur accusamus, iure ipsam provident tempore atque, cupiditate magnam commodi velit accusantium repellat laborum tempora iusto, necessitatibus praesentium officia sit ut vitae quae autem impedit? Veritatis ab magnam dolor impedit aperiam architecto similique earum repellendus deserunt tenetur explicabo nam in, cumque at laborum distinctio quo delectus, adipisci autem repudiandae fugit reiciendis? Debitis vel, doloribus iure culpa excepturi dolor error? Quae illum, natus nulla ea ad officia ab minima suscipit similique, cupiditate provident, quibusdam nisi et. Ut, ad omnis? Minus expedita ut officiis pariatur impedit autem blanditiis maxime commodi cupiditate vel odio aspernatur, aperiam ducimus ullam illum hic accusamus rem veniam sequi id praesentium nesciunt? Voluptates commodi ex omnis quos incidunt obcaecati, natus consequuntur ratione? Fuga praesentium illo, deserunt qui ea possimus aliquam porro sunt quam fugiat architecto unde earum repellat esse natus expedita dignissimos iure sit vitae a non rerum magnam placeat reprehenderit? Vitae rerum tempore consectetur voluptas voluptatibus optio consequuntur dicta at laboriosam harum ut dolore nobis maxime culpa esse praesentium obcaecati unde, itaque error delectus quaerat totam natus deleniti. Quis ducimus recusandae exercitationem non consequatur sunt porro iste at odit sapiente sed voluptatem dolorum reprehenderit vel impedit, nihil, suscipit rerum modi voluptas error quaerat cumque optio maiores ex. Incidunt magnam sapiente aliquam similique repellendus dolor sint, numquam minus. Eaque necessitatibus pariatur nesciunt eius, adipisci repellat, enim suscipit blanditiis ab inventore iste error eos accusantium, tempore temporibus qui. Atque commodi facere similique voluptas sed vel aliquam error. Officia modi odit, ullam velit quasi debitis est ducimus ea dolorem distinctio tenetur voluptatem voluptas aperiam harum consequuntur ipsa beatae quaerat. Quam qui natus tempora repellat blanditiis in, ut consectetur odio distinctio harum aspernatur dolorem quo temporibus? Nostrum modi, inventore similique iste sit voluptas consectetur distinctio corporis debitis, laboriosam laudantium exercitationem dolore ipsa, error blanditiis sint repellendus facere aspernatur quidem! Recusandae qui deserunt voluptatem, ex dicta earum nemo quia facilis deleniti quam porro repellendus necessitatibus accusantium delectus atque fugit mollitia hic suscipit. Dicta alias quaerat fugiat, iste sapiente delectus totam ducimus illo sequi praesentium doloremque quae distinctio molestias aspernatur fugit numquam id aliquid eaque ratione laudantium! Modi error maxime recusandae eaque magnam accusantium, laudantium labore nemo excepturi dicta odit nobis itaque dolorem similique quo aspernatur consequatur odio necessitatibus deserunt. Nam debitis quis animi nostrum suscipit quos ipsam magnam, quod recusandae, laboriosam iure voluptates porro numquam dolorem rem, blanditiis consequatur? Rem dolorum in facilis. Maxime excepturi iste, quibusdam itaque impedit quaerat non. Maxime ea iure ab nostrum nemo earum, delectus voluptates.</span>
-
+            margin-bottom: 25px;">{{i.reviewheading}}</h1>
+            <span>{{i.reviewcontent}}</span>
         </div>
 
     </div>
