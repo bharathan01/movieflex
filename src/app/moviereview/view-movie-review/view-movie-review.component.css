@@ -24,11 +24,12 @@ section {
 
 .container {
     width: 90%;
-    height: 500px;
+    height: auto;
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: 70px;
+    margin-bottom: 30px;
+    margin-top: 30px;
 
 }
 
@@ -92,7 +93,7 @@ section {
 
 .content {
     width: 100%;
-    height: 300px;
+    height: auto;
     overflow-y: scroll;
     margin-top: 30px;
 }
@@ -207,41 +208,66 @@ section {
     width: 110px;
     height: 110px;
     position: absolute;
-    top: 28px;
-    left: 164px;
-    background-color:#fff;
-    border-radius: 0 10px 10px 10px;
+    top: 30px;
+    right: 65px;
+    background-color: #fff;
+    border-radius: 10px 0px 10px 10px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    box-shadow:  6px 7px 13px 0px;
-    
+    box-shadow: 6px 7px 13px 0px;
+
 }
-.delete button{
+
+.delete button {
     width: 100px;
     height: 50px;
     border: none;
     border-bottom: 1px solid var(--primary-color);
-    background-color:white;
-    color:var(--primary-color);
+    background-color: white;
+    color: var(--primary-color);
     font-size: 18px;
     border-bottom: 1px solid white;
     transition: all 0.3s;
 }
-.delete button:hover{
+
+.delete button:hover {
     cursor: pointer;
     transform: translateY(4px);
 }
-.delete button i{
+
+.delete button i {
     margin-right: 10px;
 }
-.openDelete{
+
+.openDelete {
     display: none;
 }
-.activeStar{
+
+.activeStar {
     color: #ffc800;
 }
+
+.review_not_fond {
+    width: 90%;
+    height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #ffffff8a;
+    font-size: 32px;
+}
+
+.delete_div {
+    width: 100px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    font-size: 22px;
+    justify-content: center;
+}
+
 @media(max-width:750px) {
     .add_review {
         margin-top: 100px;

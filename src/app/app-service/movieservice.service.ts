@@ -54,5 +54,8 @@ export class MovieserviceService {
       return this.http.get(this.baseUrl+'/getreview')
     }
 
+    reviewDelete(id:any){
+      return this.http.delete(this.baseUrl+'/delete'+id,this.appentToken())
+    }
      
 }

@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
+import { filter } from 'rxjs';
 import { MovieserviceService } from 'src/app/app-service/movieservice.service';
 
 @Component({
@@ -19,7 +20,10 @@ export class ViewMovieReviewComponent {
   userName: any
   email: any
   reviewData: any
-  movieReviewDate:any
+  movieReviewData:any
+  singleMovieReview:any
+  MovieUserId:any
+  userRating =0
   date: String = new Date().toDateString()
   constructor(private at: ActivatedRoute ,private service:MovieserviceService) { }
   ngOnInit() {
@@ -31,19 +35,29 @@ export class ViewMovieReviewComponent {
     this.userName = JSON.parse(localStorage.getItem('username') || '')
     this.email = JSON.parse(localStorage.getItem('email') || '')
 
-    this.service.getReview().subscribe((data:any) => {
-      this.movieReviewDate = data.data
-      console.log(this.movieReviewDate);
+     this.service.getReview().subscribe((data:any) => {
+      this.movieReviewData = data.data
+      this.singleMovieReview = this.movieReviewData.filter((el:any) =>{
+        return el.movieId == this.movieId
+      })
+      this.MovieUserId = this.singleMovieReview.map((el:any) =>el._id)
+     
       
     })
+   
   }
 
   openReview() {
     this.openReviewform = !this.openReviewform
-
+    
   }
-  openDeleteForm() {
-    this.openDelete = !this.openDelete
+  openDeleteForm(id:any) {
+    for(let i of this.MovieUserId){
+      if(id == i){
+        this.openDelete = !this.openDelete
+      }
+      
+    }
   }
 
   addRating(value: any) {
@@ -66,9 +80,22 @@ export class ViewMovieReviewComponent {
       }
       this.service.uploadReview(this.reviewData).subscribe((data:any)=>{
         alert(data.message)
+       
+      })
+      this.openReviewform = true
+      this.service.getReview().subscribe((data:any) =>{
+        this.movieReviewData = data.data
+        this.singleMovieReview = this.movieReviewData.filter((el:any) =>{
+          return el.movieId == this.movieId
+        })
       })
 
     }
+  }
+
+  reviewDelete(reviewId:any){
+    console.log(reviewId)
+
   }
 
 
