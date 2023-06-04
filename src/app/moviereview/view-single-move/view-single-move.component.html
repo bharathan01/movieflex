@@ -4,7 +4,7 @@
         <div class="move_img">
             <img src={{movieDetails.Poster}} alt="">
             <div class="save">
-                <em title="Watch leater"><i class="fa-regular fa-bookmark" style="color: #ffffff;"></i> </em>
+                <em title="like"><i class="fa-solid fa-heart" (click)="like()" [ngClass]="{'likeActive':Movielike}"></i> </em>
                 <em title="Watch trailer on youtube"><i class="fa-brands fa-youtube" style="color: #ffffff;"></i></em>
             </div>
         </div>
@@ -17,20 +17,18 @@
                 <div class="duration"> <span>{{movieDetails.Runtime}}</span> <span>{{movieDetails. Released}}</span></div><br>
                 <div class="type"> <span>{{movieDetails.Type}}</span><span> {{movieDetails.Country}}</span><span>{{movieDetails.Language}}</span> </div><br>
                 <span>{{movieDetails.Genre}}</span>
-                <span>
-                    <i class="fa-solid fa-star" style="color: #ffc800;"></i>
-                    <i class="fa-solid fa-star" style="color: #ffc800;"></i>
-                    <i class="fa-solid fa-star" style="color: #ffc800;"></i>
-                    <i class="fa-solid fa-star" style="color: #ffc800;"></i>
-                    <i class="fa-solid fa-star" style="color: #ffc800;"></i>
-                </span>
+                <div >
+                    <span class="star" *ngFor="let i of star">
+                        <i class="fa-solid fa-star active" [ngClass]="{'active':i<=rating}" ></i>
+                    </span>     
+                </div>
 
             </div>
             <div class="more_img">
-                <img src="https://cdn.shopify.com/s/files/1/0969/9128/products/Pathan-ShahRukhKhan-BollywoodSuperhitHindiMoviePoster_grande.jpg?v=1675247618" alt="">
-                <img src="https://getwelljankari.com/wp-content/uploads/2022/11/Twitter.jpg" alt="">
-                <img src="https://accsolution.in/wp-content/uploads/2023/01/cropped-135121912_444755526527415_3964584659369639335_n.jpg" alt="">
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/I3T0ZCpwTGE"></iframe>
+                <img src="https://static.vecteezy.com/system/resources/previews/004/141/669/non_2x/no-photo-or-blank-image-icon-loading-images-or-missing-image-mark-image-not-available-or-image-coming-soon-sign-simple-nature-silhouette-in-frame-isolated-illustration-vector.jpg" alt="">
+                <img src="https://static.vecteezy.com/system/resources/previews/004/141/669/non_2x/no-photo-or-blank-image-icon-loading-images-or-missing-image-mark-image-not-available-or-image-coming-soon-sign-simple-nature-silhouette-in-frame-isolated-illustration-vector.jpg" alt="">
+                <img src="https://static.vecteezy.com/system/resources/previews/004/141/669/non_2x/no-photo-or-blank-image-icon-loading-images-or-missing-image-mark-image-not-available-or-image-coming-soon-sign-simple-nature-silhouette-in-frame-isolated-illustration-vector.jpg" alt="">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/dtKMEAXyPkg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
             </div>
 
 

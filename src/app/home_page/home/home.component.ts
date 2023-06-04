@@ -18,7 +18,6 @@ userEmail:any
     if(localStorage.getItem('email')){
       this.userEmail = JSON.parse( localStorage.getItem('email') || '')
       this.userName = JSON.parse( localStorage.getItem('username') || '')
-      console.log(this.userEmail,this.userName)
     }
     else{
       this.route.navigateByUrl('/login')

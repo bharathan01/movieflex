@@ -11,6 +11,12 @@ export class ViewSingleMoveComponent {
     
   singleMovieId:any
   movieDetails:any
+  star =[1,2,3,4,5]
+  movieData:any
+  totalRating:any
+  singlemovieData:any
+  rating =0
+  Movielike:any
    constructor(private route:ActivatedRoute,private service:MovieserviceService){}
    ngOnInit(){
  
@@ -22,7 +28,30 @@ export class ViewSingleMoveComponent {
         this.movieDetails = data.data
 
      })
+      
+     this.service.getReview().subscribe((data:any) => {
+      this.movieData = data.data
+      this.singlemovieData = this.movieData.filter((el:any) =>{
+        return el.movieId ==this.singleMovieId
+      })
+      this.totalRating = this.singlemovieData.map((el:any) =>el.rating) 
+      console.log(this.totalRating);
+      for(let i of this.totalRating){
+        this.rating = this.rating +i 
+      }   
+      this.rating = this.rating/this.totalRating.length
+
+     })
 
 
    }
+
+   like(){
+      this.Movielike = true
+   }
+
+
+   
+    
+
 }

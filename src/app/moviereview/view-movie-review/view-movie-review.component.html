@@ -4,20 +4,21 @@
         <span>REVIEWS</span>
         <button type="submit" class="button_add" (click)="openReview()"> ADD REVIEW </button>
     </div>
-    <div class="review" [class.openReview]="openReviewform">
+    <div class="review" [class.openReview]="openReviewform" #target>
         <div class="movie_rating">
             <span>Rate the Movie ?</span>
             <div *ngFor="let i of starCount">
                 <i class="fa-solid fa-star" (click)="addRating(i)" [ngClass]="{'activeStar':i<=rating}"></i>
             </div>
         </div>
-        <div class="review_heading">
+        <div class="review_heading" id="data">
             <input type="text" name="review_heading" placeholder="Add a one word about the movie" [(ngModel)]="reviewHeading">
         </div>
         <div class="review_content">
             <textarea name="review_content" id="review" cols="30" rows="10" class="review_txt" [(ngModel)]="reviewContent"></textarea>
         </div>
-        <div class="addReviewbtn"><button class="button_add" type="submit" (click)="uploadReview()">post</button></div>
+        <div *ngIf="reviewHeading ==undefined && reviewContent ==undefined   " class="addReviewbtn"><button class="button_add" type="submit" (click)="uploadReview()">post</button></div>
+        <div  *ngIf="reviewHeading && reviewContent "   class="addReviewbtn"><button class="button_add" type="submit" (click)="uploadEditData()">edit</button></div>
         
     </div>
     <div class="review_not_fond" *ngIf="singleMovieReview == ''">No reviews found..! </div>
@@ -30,11 +31,12 @@
             <div class="profile_name">
                 <span>{{i.username}}</span>
             </div>
-            <div class="delete_div">
+            <div class="delete_div" >
                 <a *ngIf="i.username == userName"   (click)="openDeleteForm(i._id)"><em title="More option"><span><i class="fa-solid fa-circle-info" style="color: #ffffff;"></i></span></em></a>
-                <div class="delete" [class.openDelete]="openDelete">
-                   <button type="submit"><i class="fa-solid fa-pencil" style="color: #000000;"></i>Edit</button>
+                <div class="delete" *ngIf="i.username == userName && i._id ==DataId" [class.openDelete]="openDelete">
+                    <button type="submit" (click)="editReview(target,i._id)"><i class="fa-solid fa-pencil" style="color: #000000;"></i>Edit</button>
                    <button type="submit"(click)=" reviewDelete(i._id)"><i class="fa-regular fa-trash-can" style="color: #000000;"></i>Delete</button>
+    
                 </div>
             </div>
             <div class="date">

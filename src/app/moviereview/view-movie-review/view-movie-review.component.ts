@@ -1,6 +1,7 @@
+import { Location } from '@angular/common';
 import { Component } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { filter } from 'rxjs';
+import { filter, window } from 'rxjs';
 import { MovieserviceService } from 'src/app/app-service/movieservice.service';
 
 @Component({
@@ -24,6 +25,8 @@ export class ViewMovieReviewComponent {
   singleMovieReview:any
   MovieUserId:any
   userRating =0
+  DataId:any
+  dataForUpdate:any
   date: String = new Date().toDateString()
   constructor(private at: ActivatedRoute ,private service:MovieserviceService) { }
   ngOnInit() {
@@ -47,6 +50,15 @@ export class ViewMovieReviewComponent {
    
   }
 
+  getMethodeForUPdate(){
+    this.service.getReview().subscribe((data:any) =>{
+      this.movieReviewData = data.data
+      this.singleMovieReview = this.movieReviewData.filter((el:any) =>{
+        return el.movieId == this.movieId
+      })
+    })
+  }
+
   openReview() {
     this.openReviewform = !this.openReviewform
     
@@ -54,6 +66,7 @@ export class ViewMovieReviewComponent {
   openDeleteForm(id:any) {
     for(let i of this.MovieUserId){
       if(id == i){
+        this.DataId =i
         this.openDelete = !this.openDelete
       }
       
@@ -83,18 +96,65 @@ export class ViewMovieReviewComponent {
        
       })
       this.openReviewform = true
-      this.service.getReview().subscribe((data:any) =>{
-        this.movieReviewData = data.data
-        this.singleMovieReview = this.movieReviewData.filter((el:any) =>{
-          return el.movieId == this.movieId
-        })
-      })
-
+      this.getMethodeForUPdate()
     }
   }
 
   reviewDelete(reviewId:any){
-    console.log(reviewId)
+    this.service.reviewDelete(reviewId).subscribe((data:any) =>{
+      if(data.statusCode == 200){
+        alert(data.message)
+        this.getMethodeForUPdate()
+
+      }
+      else{
+        alert(data.message)
+      }
+     
+      
+    })
+
+  }
+  editReview(el: HTMLElement,reviewid:any){
+    this.openReviewform = false
+    el.scrollIntoView({behavior: 'smooth'})
+
+    this.service.getDataForUpdate(reviewid).subscribe((data:any) =>{
+      if(data.statusCode ==200){
+        this.dataForUpdate = data.data
+        
+        this.reviewHeading = this.dataForUpdate.reviewheading
+        this.reviewContent =this.dataForUpdate.reviewcontent
+        
+      }
+      else{
+        alert(data.message)
+      }
+    })
+  }
+  uploadEditData(){
+    this.reviewData = {
+      movieId: this.movieId,
+      username: this.userName,
+      email: this.email,
+      reviewheading: this.reviewHeading,
+      reviewcontent: this.reviewContent,
+      date: this.date,
+      rating: this.rating
+    }
+    this.service.updateReview(this.dataForUpdate._id,this.reviewData).subscribe((data:any) =>{
+      if(data.statusCode == 200){
+        alert(data.message)
+        this.openReviewform = true
+        this.getMethodeForUPdate()
+
+      }
+      else{
+        alert(data.message)
+      }
+    })
+
+
 
   }
 

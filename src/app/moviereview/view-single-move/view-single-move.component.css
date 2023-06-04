@@ -29,7 +29,7 @@ section {
     position: absolute;
     background-image:
         linear-gradient(to bottom, rgba(0, 31, 209, 0), var(--primary-color)100%),
-        url('https://static-koimoi.akamaized.net/wp-content/new-galleries/2023/01/pathaan-quick-review-001.jpg');
+        url('https://images.saymedia-content.com/.image/ar_1:1%2Cc_fill%2Ccs_srgb%2Cfl_progressive%2Cq_auto:eco%2Cw_1200/MTc0NDMzMjEyMTYyOTA5NTQ0/best-mindfuck-movies.jpg');
     background-position: center;
     background-size: cover;
     opacity: 0.4;
@@ -48,6 +48,9 @@ section {
     position: relative;
     top: 152px;
     left: 80px;
+}
+.likeActive{
+    color:  #ff0000;
 }
 
 .move_img img {
@@ -187,6 +190,9 @@ section {
 .move_img:hover .save i{
     visibility: visible;
     font-size: 35px;
+}
+.active{
+    color: #ffc800;
 }
 
 @media(max-width:1000px) {
