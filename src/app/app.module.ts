@@ -30,7 +30,9 @@ import { AboutComponent } from './about/about.component';
     ReactiveFormsModule
    
   ],
-  providers: [],
+  providers: [ 
+    
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
