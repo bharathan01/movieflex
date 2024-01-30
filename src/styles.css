@@ -1,11 +1,33 @@
-*{
-    margin: 0;
-    padding: 0;
+* {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+:root {
+  --primary-color: #381050;
+  --font-family: "Rajdhani", sans-serif;
+}
+/* Width and height of the scrollbar track */
+::-webkit-scrollbar {
+  width: 12px;
 }
 
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888;
+}
 
-:root{
-    --primary-color:#381050;
-    --font-family:'Rajdhani', sans-serif;
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Corner */
+::-webkit-scrollbar-corner {
+  background: #f1f1f1;
 }

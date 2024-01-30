@@ -1,1 +1,35 @@
-<p>header is working...</p>
+<header>
+    <div class="logo"><span>MOVIEFLEX</span></div>
+     <div class="hand_burger" (click)="openMenuBar()">
+       <span></span>
+       <span></span>
+       <span></span>
+     </div>
+    <div class ="menu_bar" [class.menuBar] = "manuAction">
+      <ul>
+        <a href=""><li>HOME</li></a>
+          <li><select>
+            <option value="">MOVIES</option>
+           <option  routerLink="catagory" value="Top Rated">Top Rated</option>
+            <option routerLink="catagory" value="Action">Action</option>
+            <option routerLink="catagory"value="Comady">Comady</option>
+            <option routerLink="catagory"value="Horror">Horror</option>
+            <option routerLink="catagory" value="fantacy">Fantacy</option>
+            <option routerLink="catagory" value="Thriller">Thriller</option>
+            <option routerLink="catagory" value="Sci-fi">Sci-fi</option>
+          </select>
+        </li>
+        <a href=""><li>ABOUT</li></a>
+        <a href=""><li class="contact">CONTACT US</li></a>
+      </ul>
+      <div class="account" *ngIf="userData.userEmail">
+        <div class="profile">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b5/Windows_10_Default_Profile_Picture.svg/2048px-Windows_10_Default_Profile_Picture.svg.png" alt="">
+        </div>
+        <div class="username">
+            <span> {{userData.userEmail}}</span>
+        </div>
+        <button name="sign up" type="submit" class=" sign sign_up" (click)="logout()">log out</button>
+      </div>
+    </div>
+  </header>

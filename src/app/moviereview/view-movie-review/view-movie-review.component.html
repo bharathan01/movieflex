@@ -1,4 +1,5 @@
 <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+
 <section>
     <div class="add_review">
         <span>REVIEWS</span>
@@ -17,9 +18,8 @@
         <div class="review_content">
             <textarea name="review_content" id="review" cols="30" rows="10" class="review_txt" [(ngModel)]="reviewContent"></textarea>
         </div>
-        <div *ngIf="reviewHeading ==undefined && reviewContent ==undefined   " class="addReviewbtn"><button class="button_add" type="submit" (click)="uploadReview()">post</button></div>
+        <div *ngIf="reviewHeading == undefined && reviewContent ==undefined   " class="addReviewbtn"><button class="button_add" type="submit" (click)="uploadReview()">post</button></div>
         <div  *ngIf="reviewHeading && reviewContent "   class="addReviewbtn"><button class="button_add" type="submit" (click)="uploadEditData()">edit</button></div>
-        
     </div>
     <div class="review_not_fond" *ngIf="singleMovieReview == ''">No reviews found..! </div>
     <div class="container" *ngFor="let i  of singleMovieReview">

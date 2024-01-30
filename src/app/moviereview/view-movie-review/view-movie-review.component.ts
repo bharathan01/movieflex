@@ -125,7 +125,7 @@ export class ViewMovieReviewComponent {
         
         this.reviewHeading = this.dataForUpdate.reviewheading
         this.reviewContent =this.dataForUpdate.reviewcontent
-        
+        console.log(data)
       }
       else{
         alert(data.message)

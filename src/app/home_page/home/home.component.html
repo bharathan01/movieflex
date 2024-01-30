@@ -1,40 +1,4 @@
-<header>
-    <div class="logo"><span>MOVIEFLEX</span></div>
-     <div class="hand_burger" (click)="openMenuBar()">
-       <span></span>
-       <span></span>
-       <span></span>
-     </div>
-    <div class ="menu_bar" [class.menuBar] = "manuAction">
-      <ul>
-        <a href=""><li>HOME</li></a>
-          <li><select>
-            <option value="">Moves</option>
-           <option  routerLink="catagory" value="Top Rated">Top Rated</option>
-            <option routerLink="catagory" value="Action">Action</option>
-            <option routerLink="catagory"value="Comady">Comady</option>
-            <option routerLink="catagory"value="Horror">Horror</option>
-            <option routerLink="catagory" value="fantacy">Fantacy</option>
-            <option routerLink="catagory" value="Thriller">Thriller</option>
-            <option routerLink="catagory" value="Sci-fi">Sci-fi</option>
-          </select>
-        </li>
-        <a><li>About</li></a>
-        <a><li class="contact">Contact Us</li></a>
-      </ul>
-      <div class="account" *ngIf="userEmail">
-        <div class="profile">
-          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b5/Windows_10_Default_Profile_Picture.svg/2048px-Windows_10_Default_Profile_Picture.svg.png" alt="">
-        </div>
-        <div class="username">
-            <span>{{userEmail}}</span><br>
-            <span> user name :{{userName}}</span>
-        </div>
-        <button name="sign up" type="submit" class=" sign sign_up" (click)="logout()">log out</button>
-      </div>
-    </div>
-  </header>
-  
+  <app-header></app-header>
   <section class="main_sec">
     <div class="main_heading">
       <span class="heading_01">Find Your Best Movies.</span>
